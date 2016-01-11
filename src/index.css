@@ -20,6 +20,10 @@ body {
   margin: 0;
   color: white;
 }
+#app-header h1 a {
+  color: white;
+  text-decoration: none;
+}
 #app-header h1.danger {
   color: red;
 }
@@ -39,6 +43,10 @@ body {
   text-align: center;
   padding-top: 30px;
   border-top: 1px solid #7f8c8d;
+}
+#app-footer p a {
+  color: black;
+  text-decoration: none;
 }
 .tv-show {
   width: 100%;
