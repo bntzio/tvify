@@ -18,6 +18,6 @@
     "copy-files": "cp src/index.css public/app.css && cp src/index.html public/index.html",
     "build": "npm run public && npm run build-js && npm run copy-files",
     "serve": "serve public",
-    "start": "node public/app.js"
+    "start": "node app.js"
   }
 }
