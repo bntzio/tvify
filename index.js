@@ -2,6 +2,14 @@ $(function() {
   var $tvShowsContainer = $('#app-body').find('.tv-shows');
 
   /*
+   * Like animations
+   */
+  $tvShowsContainer.on('click', 'button.like', function(ev) {
+    var $this = $(this);
+    $this.closest('.tv-show').toggleClass('liked');
+  });
+
+  /*
    * Render shows
    */
   function renderShows(shows) {
@@ -15,7 +23,7 @@ $(function() {
 
       var $article = $(article);
       $article.hide();
-      $tvShowsContainer.append($article.show());
+      $tvShowsContainer.append($article.fadeIn(1500));
     });
   }
 
@@ -59,6 +67,7 @@ $(function() {
     '<div class="right info">' +
     '<h1>:name:</h1>' +
     '<p>:summary:</p>' +
+    '<button class="like">💚</button>' +
     '</div>' +
     '</article>';
 

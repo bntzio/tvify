@@ -13,6 +13,7 @@ body {
   position: fixed;
   background-color: #2ecc71;
   text-align: center;
+  z-index: 10;
 }
 #app-header h1 {
   line-height: 10vh;
@@ -45,9 +46,31 @@ body {
   padding: 16px;
   background-color: white;
   margin-bottom: 16px;
+  position: relative;
 }
 .tv-show:hover {
   background-color: #ecf0f1;
+}
+.tv-show.liked {
+  background-color: #2ecc71;
+  color: white;
+}
+.tv-show.liked:hover {
+  background-color: #29b765;
+}
+.tv-show button.like {
+  background: transparent;
+  border: 0;
+  outline: 0;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 22px;
+  cursor: pointer;
+  transition: all 1s ease;
+}
+.tv-show.liked button.like {
+  font-size: 40px;
 }
 .tv-show .img-container {
   width: 20%;
@@ -76,17 +99,14 @@ body {
   border-radius: 5px;
   width: 300px;
 }
-.loader,
-.loader:before,
-.loader:after {
+.loader, .loader:before, .loader:after {
   background: #ffffff;
   -webkit-animation: load1 1s infinite ease-in-out;
   animation: load1 1s infinite ease-in-out;
   width: 1em;
   height: 4em;
 }
-.loader:before,
-.loader:after {
+.loader:before, .loader:after {
   position: absolute;
   top: 0;
   content: '';
@@ -111,9 +131,7 @@ body {
   left: 1.5em;
 }
 @-webkit-keyframes load1 {
-  0%,
-  80%,
-  100% {
+  0%, 80%, 100% {
     box-shadow: 0 0 #ffffff;
     height: 4em;
   }
@@ -123,9 +141,7 @@ body {
   }
 }
 @keyframes load1 {
-  0%,
-  80%,
-  100% {
+  0%, 80%, 100% {
     box-shadow: 0 0 #ffffff;
     height: 4em;
   }
