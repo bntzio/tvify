@@ -1,3 +1,8 @@
+/*
+ * Module dependencies
+ */
+import $ from 'jquery';
+
 $(function() {
   var $tvShowsContainer = $('#app-body').find('.tv-shows');
 
